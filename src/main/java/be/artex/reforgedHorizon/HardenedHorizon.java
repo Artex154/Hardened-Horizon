@@ -1,5 +1,6 @@
 package be.artex.reforgedHorizon;
 
+import be.artex.reforgedHorizon.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -48,8 +49,9 @@ public class HardenedHorizon {
     public HardenedHorizon(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
+        ModItems.register(modEventBus);
+
         BLOCKS.register(modEventBus);
-        ITEMS.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);

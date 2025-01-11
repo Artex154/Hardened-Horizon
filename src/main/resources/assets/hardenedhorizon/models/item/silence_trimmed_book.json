@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "hardenedhorizon:item/silence_trimmed_book"
+  }
+}
